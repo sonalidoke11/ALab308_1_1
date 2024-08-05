@@ -1,38 +1,47 @@
-let firstName ="Sonali";  // created variable firstName using let
-let lastName = "P";     // created variable lastName using let
-const age = 34;     // created variable age using const
+// The initial numbers that must be verified.
+const n1 = 10;
+const n2 = 15;
+const n3 = 20;
+const n4 = 5;
 
-let counter = 2  // created variable counter using let and set initial value to 2
-const x = true;  // created boolean variable x using const and set initial value to true
-
-console.log(firstName);
-console.log("lastName");
-console.log(age);
-console.log(counter);
-console.log(x);
+// Check if the first number is larger than the last. Cache the result in a variable.
+const isFirstLargerThanLast = (n1 > n4)
+console.log("n1=10 is larger than n4=5" + isFirstLargerThanLast);
 
 
+// Check if all numbers are divisible by 5. Cache the result in a variable.
+// Here, we use modulus to check if it is divisible by 5.
+// Since % 5 is 0 it is divisible by 5
+const isDivisibleBy5 = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) == 0;
+console.log("if all numbers are divisible by 5. Cache the result in a variable = " + isDivisibleBy5);
 
-// Arithmetic Operations//
 
-let newNumber = 9;
-console.log("Value of variable newNumber = "+newNumber);
+// Accomplish the following arithmetic chain:
+// Subtract the first number from the second number.
+// Multiply the result by the third number.
+// Find the remainder of dividing the result by the fourth number.
 
-newNumber -= 3; // newNumber is now equal to 6
-console.log("Value of newNumber after -=3 = "+newNumber);
+const firstSubtract = (n2-n1)
+console.log("Subtract the first number from the second number = " + firstSubtract);
+const multiplyResult = (firstSubtract*n3)
+console.log("Multiply the result by the third number = " + multiplyResult);
+const finalRemainder =(multiplyResult % n4)
+console.log("the remainder of dividing the result by the fourth number = " + finalRemainder);
 
-newNumber /= 3; // newNumber is now equal to 2
-console.log("Value of newNumber after /=3 = "+newNumber);
 
-newNumber *= 3; // newNumber is now equal to 6
-console.log("Value of newNumber after *=3 = "+newNumber);
+// Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+const isUnder25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
+console.log("Change the way that isOver25 calculates so that we do not need to use the NOT operator (!)" + isUnder25);
 
-newNumber %= 3; // newNumber is now equal to 0
-console.log("Value of newNumber after %=3 = "+newNumber);
+// Check four: all unique numbers
+// This is long, and there are more efficient
+// ways of handling it with other data structures
+// that we will review later.
+const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 
-let a=9;
-console.log("Value of a = "+a);
+// Here, we put the results into a single variable 
+// for convenience. 
+const isValid = isFirstLargerThanLast && isDivisibleBy5 && isUnder25
 
-let newA = ++a;
-console.log("Value of a = "+newA);
-
+// Finally, log the results.
+console.log(isValid);
