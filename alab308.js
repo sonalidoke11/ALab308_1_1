@@ -34,12 +34,6 @@ console.log("the remainder of dividing the result by the fourth number = " + fin
 const isUnder25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
 console.log("Change the way that isOver25 calculates so that we do not need to use the NOT operator (!)" + isUnder25);
 
-// Check four: all unique numbers
-// This is long, and there are more efficient
-// ways of handling it with other data structures
-// that we will review later.
-const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
-
 // Here, we put the results into a single variable 
 // for convenience. 
 const isValid = isFirstLargerThanLast && isDivisibleBy5 && isUnder25
@@ -77,3 +71,32 @@ console.log(isValid);
 
    var totalHour = totalTime/60;
    console.log("Total time taken to travel 1500 miles in hour is " + totalHour );
+
+   //At 55 miles per hour, you get 30 miles per gallon.
+   var totalGallonAt55 = (1500/30)
+   var totalCostWith55 = (totalGallonAt55*3)
+   console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt55 + " and cost will be " + totalCostWith55 );
+
+    //At 60 miles per hour, you get 28 miles per gallon.
+    var totalGallonAt60 = (1500/28)
+    var totalCostWith60 = (totalGallonAt60*3)
+    console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt60 + " and cost will be " + totalCostWith60 );
+
+
+    //At 75 miles per hour, you get 23 miles per gallon.
+    var totalGallonAt75 = (1500/23)
+    var totalCostWith75 = (totalGallonAt75*3)
+    console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt75 + " and cost will be " + totalCostWith75 );
+
+
+    console.log("At speed of 55 miles/hr and 60 miles/hr budget will be enough to cover fuel cost i.e  " +totalCostWith55+ " and "+ totalCostWith60  + "but at 75 miles/hr will be not possible with given budget.")
+
+// How many gallons of fuel will you need for the entire trip?
+// Will your budget be enough to cover the fuel expense?
+// How long will the trip take, in hours?
+
+console.log("How many gallons of fuel will you need for the entire trip?  With 55miles/hr " +totalGallonAt55+ " and 60 miles/hr " + totalGallonAt60);
+
+console.log("Will your budget be enough to cover the fuel expense? Yes, with 55miles/hr and 60miles/hr but not with 75miles/hr"  )
+
+console.log("How long will the trip take, in hours? " + totalHour + " hrs");
