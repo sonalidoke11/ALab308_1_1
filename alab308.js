@@ -1,3 +1,9 @@
+
+console.log("******************************************************");
+console.log("Exercise 1")
+console.log("******************************************************");
+
+
 // The initial numbers that must be verified.
 const n1 = 10;
 const n2 = 15;
@@ -6,7 +12,7 @@ const n4 = 5;
 
 // Check if the first number is larger than the last. Cache the result in a variable.
 const isFirstLargerThanLast = (n1 > n4)
-console.log("n1=10 is larger than n4=5" + isFirstLargerThanLast);
+console.log("n1=10 is larger than n4=5 is " + isFirstLargerThanLast);
 
 
 // Check if all numbers are divisible by 5. Cache the result in a variable.
@@ -42,17 +48,10 @@ const isValid = isFirstLargerThanLast && isDivisibleBy5 && isUnder25
 console.log("Combined result for isValid = " +isValid);
 
 
+console.log(" ");
 
 
-/**
- * Part 2: Practical Math
- * var speed = 40;
-    var time = distance/speed*60;
-   return time;
- */
-
-
-   let totalDistance = 1500;
+  /* let totalDistance = 1500;
 
    let _30milesPerGallon = 30;
    let _28milesPerGallon = 28;
@@ -63,40 +62,55 @@ console.log("Combined result for isValid = " +isValid);
    let _75milesPerHour = 75;
 
    let fuelBudget = 175;
-   let avgFuelCost = 3;
+   let avgFuelCost = 3; 
 
-   //var time = distance/speed*60;
-   var totalTime = (1500/55)*60
-   console.log(totalTime);
+   Formula  : var time = distance/speed*60;*/
 
-   var totalHour = totalTime/60;
-   console.log("Total time taken to travel 1500 miles in hour is " + totalHour );
 
-   //At 55 miles per hour, you get 30 miles per gallon.
-   var totalGallonAt55 = (1500/30)
-   var totalCostWith55 = (totalGallonAt55*3)
-   console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt55 + " gallons and cost will be " + totalCostWith55 );
+  console.log("******************************************************");
+  console.log("Exercise 2")
+  console.log("******************************************************");
+    // calculating total time taken with speed of 55 miles per hour
+    var totalTimeWith55 = (1500/55)*60
+    var totalTimeInHour55 = totalTimeWith55/60;
+    //At 55 miles per hour, you get 30 miles per gallon.
+    var totalGallonAt55 = (1500/30)              // gives total gallons required
+    var totalCostWith55 = (totalGallonAt55*3)   // gives cost to purchase total gallon
 
+
+   // calculating total time taken with speed of  60 miles per hour
+    var totalTimeWith60 = (1500/60)*60
+    var totalTimeInHour60 = totalTimeWith60/60;
     //At 60 miles per hour, you get 28 miles per gallon.
-    var totalGallonAt60 = (1500/28)
-    var totalCostWith60 = (totalGallonAt60*3)
-    console.log("Total gallon required to travel with speed of 60 miles will be " + totalGallonAt60 + "gallons and cost will be " + totalCostWith60 );
+    var totalGallonAt60 = (1500/28)             // gives total gallons required
+    var totalCostWith60 = (totalGallonAt60*3)  // gives cost to purchase total gallon
 
 
+    // calculating total time taken with speed of 75 miles per hour
+    var totalTimeWith75 = (1500/75)*60
+    var totalTimeInHour75 = totalTimeWith75/60;
     //At 75 miles per hour, you get 23 miles per gallon.
-    var totalGallonAt75 = (1500/23)
-    var totalCostWith75 = (totalGallonAt75*3)
-    console.log("Total gallon required to travel with speed of 75 miles will be " + totalGallonAt75 + " gallons and cost will be " + totalCostWith75 );
+    var totalGallonAt75 = (1500/23)            // gives total gallons required
+    var totalCostWith75 = (totalGallonAt75*3)  // gives cost to purchase total gallon
 
 
-    console.log("At speed of 55 miles/hr and 60 miles/hr budget will be enough to cover fuel cost i.e  " +totalCostWith55+ " and "+ totalCostWith60  + "but at 75 miles/hr will be not possible with given budget.")
+console.log("Details of trip with 55miles/hr");
+console.log("   1) Total Gallons required = " + totalGallonAt55 + " gallons");
+console.log("   2) Total cost required = $ " + totalCostWith55 );
+console.log("   3) Total time required to reach = " + totalTimeInHour55 + " hrs");
 
-// How many gallons of fuel will you need for the entire trip?
-// Will your budget be enough to cover the fuel expense?
-// How long will the trip take, in hours?
+console.log(" ");
 
-console.log("How many gallons of fuel will you need for the entire trip?  With 55miles/hr " +totalGallonAt55+ " and 60 miles/hr " + totalGallonAt60);
+console.log("Details of trip with 60miles/hr");
+console.log("   1) Total Gallons required = " + totalGallonAt60 + " gallons");
+console.log("   2) Total cost required = $ " + totalCostWith60);
+console.log("   3) Total time required to reach = " + totalTimeInHour60 + " hrs");
 
-console.log("Will your budget be enough to cover the fuel expense? Yes, with 55miles/hr and 60miles/hr but not with 75miles/hr"  )
+console.log(" ");
 
-console.log("How long will the trip take, in hours? " + totalHour + " hrs");
+console.log("Details of trip with 75miles/hr");
+console.log("   1) Total Gallons required = " + totalGallonAt75 + " gallons");
+console.log("   2) Total cost required = $ " + totalCostWith75);
+console.log("   3) Total time required to reach = " + totalTimeInHour75 + " hrs");
+
+console.log("So as per given details Trip will be successful with 55 miles per hour or 60 miles per hour but NOTT with 75 miles per hour")
