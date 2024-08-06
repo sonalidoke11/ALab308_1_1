@@ -39,7 +39,7 @@ console.log("Change the way that isOver25 calculates so that we do not need to u
 const isValid = isFirstLargerThanLast && isDivisibleBy5 && isUnder25
 
 // Finally, log the results.
-console.log(isValid);
+console.log("Combined result for isValid = " +isValid);
 
 
 
@@ -75,18 +75,18 @@ console.log(isValid);
    //At 55 miles per hour, you get 30 miles per gallon.
    var totalGallonAt55 = (1500/30)
    var totalCostWith55 = (totalGallonAt55*3)
-   console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt55 + " and cost will be " + totalCostWith55 );
+   console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt55 + " gallons and cost will be " + totalCostWith55 );
 
     //At 60 miles per hour, you get 28 miles per gallon.
     var totalGallonAt60 = (1500/28)
     var totalCostWith60 = (totalGallonAt60*3)
-    console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt60 + " and cost will be " + totalCostWith60 );
+    console.log("Total gallon required to travel with speed of 60 miles will be " + totalGallonAt60 + "gallons and cost will be " + totalCostWith60 );
 
 
     //At 75 miles per hour, you get 23 miles per gallon.
     var totalGallonAt75 = (1500/23)
     var totalCostWith75 = (totalGallonAt75*3)
-    console.log("Total gallon required to travel with speed of 55 miles will be " + totalGallonAt75 + " and cost will be " + totalCostWith75 );
+    console.log("Total gallon required to travel with speed of 75 miles will be " + totalGallonAt75 + " gallons and cost will be " + totalCostWith75 );
 
 
     console.log("At speed of 55 miles/hr and 60 miles/hr budget will be enough to cover fuel cost i.e  " +totalCostWith55+ " and "+ totalCostWith60  + "but at 75 miles/hr will be not possible with given budget.")
